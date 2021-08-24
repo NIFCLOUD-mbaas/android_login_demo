@@ -1,28 +1,31 @@
+apply plugin: 'com.android.application'
+
+/*
+apply plugin: 'devicefarm'
 def envAccessKey = ENV_ACCESS_KEY
 def envSecretKey = ENV_SECRET_KEY
-apply plugin: 'com.android.application'
-apply plugin: 'devicefarm'
 
 devicefarm {
     projectName "test_android"
-    devicePool "android" // optional: Defaults to "Top Devices"
+    devicePool "android"
     authentication {
         accessKey envAccessKey
         secretKey envSecretKey
     }
+
     instrumentation { }
 }
-    
+*/
+
 android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.nifcloud.user"
+        applicationId "ncmbdataquick.mbaas.com.nifcloud.datastorequickstart"
         minSdkVersion 15
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -30,10 +33,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-    compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
     }
 }
 
@@ -44,8 +43,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-    implementation 'com.google.code.gson:gson:2.8.6'
     implementation files('libs/NCMB.jar')
 }
