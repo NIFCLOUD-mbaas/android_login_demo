@@ -64,8 +64,6 @@
 
 ※このサンプルアプリには既にSDKが実装済み（下記手順）となっています。（ver.4.1.0)<br>　最新版をご利用の場合は入れ替えてご利用ください。
 
-* SDKダウンロード
-SDKはここ（[SDK リリースページ](https://github.com/NIFCLOUD-mbaas/ncmb_android/releases)）から取得してください.
 * SDKをインポート
   - app/build.gradleに以下を追加します。
 ```gradle
