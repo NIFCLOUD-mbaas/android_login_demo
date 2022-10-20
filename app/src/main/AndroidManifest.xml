@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:exported="true"
             android:name="com.nifcloud.user.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
